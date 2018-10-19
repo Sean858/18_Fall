@@ -1,0 +1,47 @@
+/* Basic element styles */
+        html {
+             color: #000;
+             background: paleturquoise;
+             min-height: 100%;
+         }
+        /* Structure */
+        .container {
+            text-align: center;
+            width: 500px;
+            min-height: 600px;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-top: none;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            box-shadow: 1px 1px 10px #000;
+            -moz-box-shadow: 1px 1px 10px #000;
+            -webkit-box-shadow: 1px 1px 5px #000;
+        }
+        button{
+            margin: 200px auto;
+            width: 100px;
+            height: 30px;
+            background-color: aliceblue;
+        }
+
+        /* Fullscreen */
+        html:-moz-full-screen {
+            background: blue;
+        }
+
+        html:-webkit-full-screen {
+            background: blue;
+        }
+
+        html:-ms-fullscreen {
+            background: blue;
+            width: 100%; /* needed to center contents in IE */
+        }
+
+        html:fullscreen {
+            background: blue;
+        }

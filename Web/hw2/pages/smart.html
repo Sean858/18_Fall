@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="author" content="Dingming Feng">
+	<title>DingmingFeng</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" media="screen" href="../css/test.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="../js/function.js"></script>
+
+</head>
+
+
+<body onload="both">
+	<div>
+		<header>
+			<h2 class="title">DingmingFeng(冯鼎铭)</h2>
+		</header>
+	</div>
+
+	<div class="container-fluid">
+		<div class="col-lg-2">
+			<ul>
+				<li><a class="active" href="mainpage.html">Main</a></li>
+				<li><a href="photos.html">Photos</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="skills.html">My skill</a></li>
+				<li><a href="cv.html">Cv</a></li>
+				<li><a href="smart.html">Class</a></li>
+			</ul>
+			<iframe id="watching" src="mark.html" frameborder="1" style="width: 100%; height: 200px;"></iframe>
+		</div>
+
+		<div class="col-lg-10">
+			<ul>
+				<li class="intro">These are the <span>classes</span> that I am taking or plan to take.</li>
+				<li class="intro">Click "Add more" to add new classes.</li>
+				<li class="extra">Click <span>existed classes</span> to mark it as taken or not</li>
+				<li class="add" onclick="javascript:add(this)"><span>Add more...</span></li>
+				<li class="notTaken" onclick="javascript:take(this)">Web Technologies and Standards</li>
+				<li class="notTaken" onclick="javascript:take(this)">Database Management</li>
+				<li class="notTaken" onclick="javascript:take(this)">Data Structure</li>
+				<li class="notTaken" onclick="javascript:take(this)">Data Analytics</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="col-sm-4">
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="mainpage.html">Main</a></li>
+				<li class="breadcrumb-item active" aria-current="page">Cv</li>
+			</ol>
+		</nav>
+	</div>
+</body>
+
+</html>

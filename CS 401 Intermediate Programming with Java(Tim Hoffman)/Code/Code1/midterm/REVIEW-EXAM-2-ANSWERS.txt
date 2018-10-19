@@ -1,0 +1,46 @@
+REVIEW-EXAM-2-ANSWERS
+
+1) What's incongruitous about how we wrote/used the printHI() method?
+  (Hint: it compiles and executes fine)
+
+	public class Q5
+	{
+		public static void main(String[] args)
+		{
+			printHi();
+		}
+
+		public static int printHi()
+		{
+			System.out.println("Hello!");
+			return 1;
+		}
+	}
+	
+	< answer here >: printHi() returns an int but we never use at the call site
+
+
+2) What's wrong with this program ? 
+
+	Random r = new Random(10);
+	int[] arr = new int[10];
+	for (int i = 0; i < 10; i++)
+		arr[i] = r.nextInt(101);
+	arr[i - 1] = 0;
+
+	Won't compile: The variable i is not in scope after the for loop is finished
+
+3) Without using a compiler, write a method that receieves an int as a param and returns it as a String.
+
+	public String atoi( int i )
+	{
+		return ""+ i;
+	}
+
+
+
+4) There are 2 primary things the keyword "new" does in the follow code segment, "int[] arr = new int[10]".
+	What are they?
+
+	Creates the array object with 10 ints in 
+	Returns the address of (reference to) the array object

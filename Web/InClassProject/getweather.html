@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <div ng-app="myApp" ng-controller="myCtrl">
+
+        Country: <input type="text" ng-model="Country" value="Liverpool" ng-change="input()"><br>
+
+        <p ng-model="Output"></p>
+
+        <br>
+        URL: {{ Output }}
+        Result: {{ result }}
+
+        <script>
+            var app = angular.module('myApp', []);
+            app.controller('myCtrl', function ($scope, $http) {
+                $scope.input = function () {
+                    $scope.result = "City name is invalid";
+                    $http({
+                        method: "GET",
+                        url: 'http://api.openweathermap.org/data/2.5/weather?q=' + $scope.Country +
+                            ',uk&APPID=2760364a4d9934c54aeb6ac28b999532'
+                    }).
+                    then(function mySuccess(response) {
+                        $scope.result = response.data;
+                    });
+                }
+
+            });
+        </script>
+    </div>
+</body>
+
+</html>

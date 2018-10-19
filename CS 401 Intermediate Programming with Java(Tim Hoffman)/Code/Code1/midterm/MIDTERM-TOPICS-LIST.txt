@@ -1,0 +1,71 @@
+
+A SIGNIFICANT COMPENENT OF THIS EXAM WIL BE QUESTIONS ABOUT YOUR LABS AND PROJECTS.
+THESE WILL INCLUDE QUESTIONS ABOUT COMPLECITY ( O(n) )
+AS WELL AS HYPOTHETICAL QUESTIONS ABOUT WHAT HAPPENS IF
+SOME CHANGE WAS MADE THE INPUT OR SOLUTION CODE. YOU SHOULD
+ALSO BE ABLE TO EXPLAIN WHY CERTAIN THINGS DO
+WHAT THEY DO.
+
+
+
+#1) plain arrays and the "array discipline"
+
+	initialized values tight to front
+	must have a count variable
+	limitations of arrays ( overflow etc)
+	basic array operations
+
+#2)	Big O notation
+	O(1) constant time		an operation whose cost in time/space NOT affected by size of input
+	O(log2N) log time		example: binary search
+	O(N) linear time		example: print all the elements of an array, count from 1 to N
+	O( NLog2N) log linear time	example: quicksort and the other maximally efficient sorts
+	O(N^^2) square time / quadratic time)	example: bubble sort
+	O(2^N) exponential time		example: generating all the subsets of a set
+	O(N!) factorial time		example: generate all permutations of a set or a string
+	What makes it O(1) rather than O(some function of N)	not affect by size of input or search space
+	Examples: indexing into an array, printing a number, comparing two primitives, assigning a value into a variable
+
+#3) SEARCHING AND SORTING
+
+	bubbleSort
+	selectionSort
+	binarySearch
+	Big "Oh" notation i.e. O(N), O(log2N), O(N^2) etc
+
+#4)	Strings. An object that contains a char array.
+	Strings have many built in methods: 
+		.length(), .charAt(), indexOf(), toCharArray(), indexOf(), substring(), etc. etc.
+		Strings are immutable. Once initialized, cannot be modified in anyway.
+
+#5)	Methods: void or may return any define data type primitive or Object
+		 may take parameters or not.
+
+#6) PLAIN ARRAYS & the "array discipline"
+
+	define an array
+		int[] arr= new int[5]; or int[] arr = { 9,4,2,6,4 };
+	define a count
+		int count=0;
+	use count as 1) index where next element goes  2) number of elements in the array
+	keep all initialized values packed tight to the front
+	the last valid element is ALWAYS at count-1
+	never examine or use a value beyond count-1 (doing so is a forensic action)
+
+	arrays are objects and objects need reference variables
+	Objects are NEVER passed from method to method. Only their references are passed.
+
+#7) ArrayList
+
+	how to declare
+	why we put the <String> or <Integer> after the word ArrayList
+	.add() .get() .remove() .size()
+	advantages of ArrayList over plain arrays#
+
+#8) Matrices (2D arrays)
+	Row major, defined using two pairs of hard braces. First index is row, second is column.
+
+
+	
+
+

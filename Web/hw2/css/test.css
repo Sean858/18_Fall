@@ -1,0 +1,111 @@
+/*Dingming Feng*/
+
+body {
+    font-family: "Times New Roman", Times, serif;
+}
+
+header {
+    background-color: black;
+    padding: 35px;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+}
+
+h2.title {
+    font-size: 5vw;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    font-size: 2em;
+}
+
+th.th,
+td {
+    text-align: center;
+    padding: 8px;
+}
+
+div {
+    width: 100%;
+    background-color: white;
+}
+
+div.col-sm-4 {
+    font-size: 1vw;
+}
+
+div.col-lg-3 {
+    font-size: 3vw;
+}
+
+div.col-lg-4 {
+    font-size: 2vw;
+}
+
+div.col-lg-5 {
+    font-size: 3vw;
+}
+
+div.col-lg-6 {
+    overflow-x: auto;
+}
+
+h3 {
+    font-style: italic;
+}
+
+ul {
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    background-color: white;
+}
+
+li a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+    font-size: 2em;
+}
+
+li a.active {
+    background-color: black;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+.taken {
+    text-decoration: line-through;
+    background-color: lavender;
+}
+
+span {
+    color: red;
+}
+
+.extra {
+    font-size: 3vw;
+    color: grey;
+}
+
+.extra span {
+    color: inherit;
+}
+
+.intro {
+    font-size: 3vw;
+}
+
+.add {
+    font-size: 2vw;
+}

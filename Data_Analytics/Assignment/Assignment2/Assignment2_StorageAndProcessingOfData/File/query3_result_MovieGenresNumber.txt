@@ -1,0 +1,24 @@
+Query time: 0.19s
+
+MovieGenres, Number
+Adventure, 1025
+Animation, 286
+Children, 528
+Comedy, 3703
+Fantasy, 543
+Action, 1473
+Crime, 1118
+Thriller, 1706
+Drama, 5339
+Romance, 1685
+Horror, 1013
+Mystery, 509
+Sci-Fi, 754
+IMAX, 29
+Documentary, 482
+War, 511
+Musical, 436
+Film-Noir, 148
+Western, 275
+
+

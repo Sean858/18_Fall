@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<form  ng-app="myApp"  ng-controller="validateCtrl"
+       name="myForm" novalidate>
+
+    <p>Username:<br>
+        <input type="text" name="user" ng-model="user" ng-minlength="3" ng-maxlength="8" required>
+        <span style="color:red" ng-show="myForm.user.$dirty && myForm.user.$invalid">
+  <span ng-show="myForm.user.$error.required">Username is required.</span>
+  <span ng-show="myForm.user.$error.minlength">Username too short.</span>
+  <span ng-show="myForm.user.$error.maxlength">Username too long.</span>
+  </span>
+    </p>
+
+    <p>Email:<br>
+        <input type="email" name="email" ng-model="email" required>
+        <span style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid">
+  <span ng-show="myForm.email.$error.required">Email is required.</span>
+  <span ng-show="myForm.email.$error.email">Invalid email address.</span>
+  </span>
+    </p>
+
+    <p>Telephone:<br>
+        <input type="tel" name="phone" ng-pattern="regex" ng-model="phone" required>
+        <span style="color:red" ng-show="myForm.phone.$dirty && myForm.phone.$invalid">
+  <span ng-show="myForm.phone.$error.required">Phone is required.</span>
+  <span ng-show="myForm.phone.$error.pattern">Invalid 11 number phone number.</span>
+  </span>
+    </p>
+
+    <p>
+        <input type="submit"
+               ng-disabled="myForm.user.$dirty && myForm.user.$invalid ||
+  myForm.email.$dirty && myForm.email.$invalid || myForm.phone.$dirty && myForm.phone.$invalid">
+    </p>
+
+</form>
+
+
+<!--<div ng-app="myApp2" ng-controller="myCtrl">-->
+    <!--Country: <input type="text" ng-model="Country" value="London"-->
+                    <!--ng-change="input()"><br>-->
+    <!--<p ng-model="Output"></p >-->
+    <!--<br>-->
+    <!--URL: {{ Output }}-->
+    <!--Result: {{ result }}-->
+<!--</div>-->
+
+
+    <!--<script>-->
+    <!--var app2 = angular.module('myApp2', []);-->
+    <!--app2.controller('myCtrl', function($scope,$http) {-->
+
+<!--//$scope.Country="London";-->
+
+        <!--$scope.input = function(){-->
+
+            <!--$scope.Output= 'https://samples.openweathermap.org/data/2.5/weather?q='+$scope.Country+',uk&appid=b6907d289e10d714a6e88b30761fae22';-->
+
+            <!--$scope.result= "Please Enter a valid City";-->
+
+            <!--$http({-->
+
+                <!--method : "GET",-->
+
+                <!--url : 'http://api.openweathermap.org/data/2.5/weather?q='+$scope.Country+',uk&APPID=7ae14bcaf98c2f61eeabb10e4b15114e'-->
+
+            <!--}).then(function mySuccess(response) {-->
+
+            <!--$scope.result = response.data;-->
+
+        <!--}, function myError(response) {-->
+
+            <!--$scope.result = "345";-->
+
+        <!--});-->
+
+    <!--/*$http.get($scope.Output)-->
+
+    <!--.then(function(response) {-->
+
+    <!--$scope.result = response.data;-->
+
+    <!--});*/-->
+
+    <!--}-->
+
+    <!--});-->
+
+<!--</script>-->
+
+
+<h2>AngularJS Sample Application</h2>
+<div ng-app = "myApp" ng-controller = "studentController">
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Roll No</th>
+            <th>Percentage</th>
+        </tr>
+
+        <tr ng-repeat = "student in students">
+            <td>{{ student.Name }}</td>
+            <td>{{ student.RollNo }}</td>
+            <td>{{ student.Percentage }}</td>
+        </tr>
+    </table>
+</div>
+
+
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('validateCtrl', function($scope) {
+        $scope.regex = /^1[34578]\d{9}$/;
+        $scope.user = 'John Doe';
+        $scope.email = 'john.doe@gmail.com';
+        $scope.phone = '4125003632';
+    });
+
+    app.controller('studentController',function($scope,$http) {
+        var url = "data.txt";
+
+        $http.get(url).then( function(response) {
+            $scope.students = response.data;
+        });
+    })
+
+</script>
+
+
+<script>
+    function studentController($scope,$http) {
+        var url = "data.txt";
+
+        $http.get(url).then( function(response) {
+            $scope.students = response.data;
+        });
+    }
+</script>
+
+</body>
+</html>
