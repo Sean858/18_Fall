@@ -13,7 +13,7 @@ public class getBinary {
     }
     
     public static String getBinary(int n){
-        if(n<0){throw new IllegalArgumentException();}
+        if(n<0){ throw new IllegalArgumentException();}
         
         if(n<=1){
             return Integer.toString(n);
