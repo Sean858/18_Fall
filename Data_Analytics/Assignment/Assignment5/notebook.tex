@@ -281,12 +281,27 @@
 
     
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}1}]:} \PY{k+kp}{setwd}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{/Users/chengaoxiang/Desktop/18\PYZus{}Fall/Data\PYZus{}Analytics/Assignment/Assignment5\PYZdq{}}\PY{p}{)}
+{\color{incolor}In [{\color{incolor} }]:} Group Member\PY{o}{:}\PY{p}{(}gac69\PY{p}{,} has175\PY{p}{,} dif24\PY{p}{,} yil210\PY{p}{,} lil131\PY{p}{)}
+\end{Verbatim}
+
+
+    \hypertarget{data-process}{%
+\section{1. Data Process}\label{data-process}}
+
+\hypertarget{we-have-collected-several-datasets-includes-cocoa_consumption-alcohol_consumption-fish_consumption-smoker_number-we-want-to-see-the-relation-of-those-attributes-with-the-nobel-prize.}{%
+\subsubsection{We have collected several datasets, includes
+cocoa\_consumption, alcohol\_consumption, fish\_consumption,
+smoker\_number, we want to see the relation of those attributes with the
+nobel
+prize.}\label{we-have-collected-several-datasets-includes-cocoa_consumption-alcohol_consumption-fish_consumption-smoker_number-we-want-to-see-the-relation-of-those-attributes-with-the-nobel-prize.}}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}2}]:} \PY{k+kp}{setwd}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{/Users/chengaoxiang/Desktop/18\PYZus{}Fall/Data\PYZus{}Analytics/Assignment/Assignment5\PYZdq{}}\PY{p}{)}
 \end{Verbatim}
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}2}]:} \PY{k+kp}{getwd}\PY{p}{(}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}3}]:} \PY{k+kp}{getwd}\PY{p}{(}\PY{p}{)}
 \end{Verbatim}
 
 
@@ -294,12 +309,12 @@
 
     
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}3}]:} collection\PYZus{}data\PYZus{}ori \PY{o}{\PYZlt{}\PYZhy{}} read.csv\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{summary.csv\PYZdq{}}\PY{p}{,} header \PY{o}{=} \PY{k+kc}{TRUE}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}4}]:} collection\PYZus{}data\PYZus{}ori \PY{o}{\PYZlt{}\PYZhy{}} read.csv\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{summary.csv\PYZdq{}}\PY{p}{,} header \PY{o}{=} \PY{k+kc}{TRUE}\PY{p}{)}
 \end{Verbatim}
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}4}]:} \PY{k+kp}{head}\PY{p}{(}collection\PYZus{}data\PYZus{}ori\PY{p}{)}
+{\color{incolor}In [{\color{incolor}5}]:} \PY{k+kp}{head}\PY{p}{(}collection\PYZus{}data\PYZus{}ori\PY{p}{)}
 \end{Verbatim}
 
 
@@ -317,7 +332,7 @@
 
     
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}5}]:} \PY{k+kp}{summary}\PY{p}{(}collection\PYZus{}data\PYZus{}ori\PY{p}{)}
+{\color{incolor}In [{\color{incolor}6}]:} \PY{k+kp}{summary}\PY{p}{(}collection\PYZus{}data\PYZus{}ori\PY{p}{)}
 \end{Verbatim}
 
 
@@ -343,12 +358,12 @@
 
     
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}6}]:} collection\PYZus{}data \PY{o}{\PYZlt{}\PYZhy{}} na.omit\PY{p}{(}collection\PYZus{}data\PYZus{}ori\PY{p}{)}
+{\color{incolor}In [{\color{incolor}7}]:} collection\PYZus{}data \PY{o}{\PYZlt{}\PYZhy{}} na.omit\PY{p}{(}collection\PYZus{}data\PYZus{}ori\PY{p}{)}
 \end{Verbatim}
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}7}]:} \PY{k+kp}{summary}\PY{p}{(}collection\PYZus{}data\PY{p}{)}
+{\color{incolor}In [{\color{incolor}8}]:} \PY{k+kp}{summary}\PY{p}{(}collection\PYZus{}data\PY{p}{)}
 \end{Verbatim}
 
 
@@ -373,24 +388,31 @@
     \end{verbatim}
 
     
+    \hypertarget{data-analysis}{%
+\section{2. Data Analysis}\label{data-analysis}}
+
+\hypertarget{relationship-between-cocoa_consumption-and-nobel}{%
+\subsection{2.1 Relationship between Cocoa\_consumption and
+Nobel}\label{relationship-between-cocoa_consumption-and-nobel}}
+
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}31}]:} plot\PY{p}{(}collection\PYZus{}data\PY{o}{\PYZdl{}}cocoaconsump2010\PY{p}{,}collection\PYZus{}data\PY{o}{\PYZdl{}}Laureates10million\PY{p}{,}col\PY{o}{=}\PY{l+s}{\PYZsq{}}\PY{l+s}{red\PYZsq{}}\PY{p}{,}cex\PY{o}{=}\PY{l+m}{0.5}\PY{p}{,}lty\PY{o}{=}\PY{l+m}{1}\PY{p}{,}pch\PY{o}{=}\PY{l+m}{15}\PY{p}{)} 
-         text\PY{p}{(}collection\PYZus{}data\PY{o}{\PYZdl{}}cocoaconsump2010\PY{p}{,}collection\PYZus{}data\PY{o}{\PYZdl{}}Laureates10million\PY{p}{,}collection\PYZus{}data\PY{o}{\PYZdl{}}Entity\PY{p}{,}cex\PY{o}{=}\PY{l+m}{0.6}\PY{p}{,} font\PY{o}{=}\PY{l+m}{3}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}9}]:} plot\PY{p}{(}collection\PYZus{}data\PY{o}{\PYZdl{}}cocoaconsump2010\PY{p}{,}collection\PYZus{}data\PY{o}{\PYZdl{}}Laureates10million\PY{p}{,}col\PY{o}{=}\PY{l+s}{\PYZsq{}}\PY{l+s}{red\PYZsq{}}\PY{p}{,}cex\PY{o}{=}\PY{l+m}{0.5}\PY{p}{,}lty\PY{o}{=}\PY{l+m}{1}\PY{p}{,}pch\PY{o}{=}\PY{l+m}{15}\PY{p}{)} 
+        text\PY{p}{(}collection\PYZus{}data\PY{o}{\PYZdl{}}cocoaconsump2010\PY{p}{,}collection\PYZus{}data\PY{o}{\PYZdl{}}Laureates10million\PY{p}{,}collection\PYZus{}data\PY{o}{\PYZdl{}}Entity\PY{p}{,}cex\PY{o}{=}\PY{l+m}{0.6}\PY{p}{,} font\PY{o}{=}\PY{l+m}{3}\PY{p}{)}
 \end{Verbatim}
 
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_7_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_10_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}32}]:} lm.nobel \PY{o}{\PYZlt{}\PYZhy{}} lm\PY{p}{(}Laureates10million \PY{o}{\PYZti{}} cocoaconsump2010\PY{p}{,} data \PY{o}{=} collection\PYZus{}data\PY{p}{)}
+{\color{incolor}In [{\color{incolor}10}]:} lm.cocoa\PYZus{}nobel \PY{o}{\PYZlt{}\PYZhy{}} lm\PY{p}{(}Laureates10million \PY{o}{\PYZti{}} cocoaconsump2010\PY{p}{,} data \PY{o}{=} collection\PYZus{}data\PY{p}{)}
 \end{Verbatim}
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}33}]:} \PY{k+kp}{summary}\PY{p}{(}lm.nobel\PY{p}{)}
+{\color{incolor}In [{\color{incolor}11}]:} \PY{k+kp}{summary}\PY{p}{(}lm.cocoa\PYZus{}nobel\PY{p}{)}
 \end{Verbatim}
 
 
@@ -419,37 +441,186 @@ F-statistic: 49.23 on 1 and 39 DF,  p-value: 2.037e-08
 
     
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}34}]:} plot\PY{p}{(}lm.nobel\PY{p}{)}
+{\color{incolor}In [{\color{incolor}12}]:} plot\PY{p}{(}lm.cocoa\PYZus{}nobel\PY{p}{)}
 \end{Verbatim}
 
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_10_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_13_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_10_1.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_13_1.png}
     \end{center}
     { \hspace*{\fill} \\}
     
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_10_2.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_13_2.png}
     \end{center}
     { \hspace*{\fill} \\}
     
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_10_3.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_13_3.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \hypertarget{relationship-between-alcohol_consumption-and-nobel}{%
+\subsection{2.2 Relationship between Alcohol\_consumption and
+Nobel}\label{relationship-between-alcohol_consumption-and-nobel}}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}13}]:} plot\PY{p}{(}collection\PYZus{}data\PY{o}{\PYZdl{}}fishconsump2013\PY{p}{,}collection\PYZus{}data\PY{o}{\PYZdl{}}Laureates10million\PY{p}{,}col\PY{o}{=}\PY{l+s}{\PYZsq{}}\PY{l+s}{red\PYZsq{}}\PY{p}{,}cex\PY{o}{=}\PY{l+m}{0.5}\PY{p}{,}lty\PY{o}{=}\PY{l+m}{1}\PY{p}{,}pch\PY{o}{=}\PY{l+m}{15}\PY{p}{)} 
+         text\PY{p}{(}collection\PYZus{}data\PY{o}{\PYZdl{}}fishconsump2013\PY{p}{,}collection\PYZus{}data\PY{o}{\PYZdl{}}Laureates10million\PY{p}{,}collection\PYZus{}data\PY{o}{\PYZdl{}}Entity\PY{p}{,}cex\PY{o}{=}\PY{l+m}{0.6}\PY{p}{,} font\PY{o}{=}\PY{l+m}{3}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_15_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}35}]:} lm.all\PYZus{}nobel \PY{o}{\PYZlt{}\PYZhy{}} lm\PY{p}{(}Laureates10million \PY{o}{\PYZti{}} \PY{l+m}{.}\PY{p}{,} data \PY{o}{=} collection\PYZus{}data\PY{p}{[}\PY{p}{,}\PY{l+m}{2}\PY{o}{:}\PY{l+m}{6}\PY{p}{]}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}14}]:} lm.alcohol\PYZus{}nobel \PY{o}{\PYZlt{}\PYZhy{}} lm\PY{p}{(}Laureates10million \PY{o}{\PYZti{}} alcoholconsump2015\PY{p}{,} data \PY{o}{=} collection\PYZus{}data\PY{p}{)}
 \end{Verbatim}
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}36}]:} \PY{k+kp}{summary}\PY{p}{(}lm.all\PYZus{}nobel\PY{p}{)}
+{\color{incolor}In [{\color{incolor}15}]:} \PY{k+kp}{summary}\PY{p}{(}lm.alcohol\PYZus{}nobel\PY{p}{)}
+\end{Verbatim}
+
+
+    
+    \begin{verbatim}
+
+Call:
+lm(formula = Laureates10million ~ alcoholconsump2015, data = collection_data)
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-7.530 -6.360 -4.462  4.239 22.984 
+
+Coefficients:
+                   Estimate Std. Error t value Pr(>|t|)
+(Intercept)          5.8910     4.8493   1.215    0.232
+alcoholconsump2015   0.1496     0.4870   0.307    0.760
+
+Residual standard error: 8.964 on 39 degrees of freedom
+Multiple R-squared:  0.002414,	Adjusted R-squared:  -0.02317 
+F-statistic: 0.09437 on 1 and 39 DF,  p-value: 0.7603
+
+    \end{verbatim}
+
+    
+    \hypertarget{relationship-between-fish_consumption-and-nobel}{%
+\subsection{2.3 Relationship between Fish\_consumption and
+Nobel}\label{relationship-between-fish_consumption-and-nobel}}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}16}]:} plot\PY{p}{(}collection\PYZus{}data\PY{o}{\PYZdl{}}fishconsump2013\PY{p}{,}collection\PYZus{}data\PY{o}{\PYZdl{}}Laureates10million\PY{p}{,}col\PY{o}{=}\PY{l+s}{\PYZsq{}}\PY{l+s}{red\PYZsq{}}\PY{p}{,}cex\PY{o}{=}\PY{l+m}{0.5}\PY{p}{,}lty\PY{o}{=}\PY{l+m}{1}\PY{p}{,}pch\PY{o}{=}\PY{l+m}{15}\PY{p}{)} 
+         text\PY{p}{(}collection\PYZus{}data\PY{o}{\PYZdl{}}fishconsump2013\PY{p}{,}collection\PYZus{}data\PY{o}{\PYZdl{}}Laureates10million\PY{p}{,}collection\PYZus{}data\PY{o}{\PYZdl{}}Entity\PY{p}{,}cex\PY{o}{=}\PY{l+m}{0.6}\PY{p}{,} font\PY{o}{=}\PY{l+m}{3}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_19_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}17}]:} lm.fish\PYZus{}nobel \PY{o}{\PYZlt{}\PYZhy{}} lm\PY{p}{(}Laureates10million \PY{o}{\PYZti{}} fishconsump2013\PY{p}{,} data \PY{o}{=} collection\PYZus{}data\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}18}]:} \PY{k+kp}{summary}\PY{p}{(}lm.fish\PYZus{}nobel\PY{p}{)}
+\end{Verbatim}
+
+
+    
+    \begin{verbatim}
+
+Call:
+lm(formula = Laureates10million ~ fishconsump2013, data = collection_data)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-10.486  -5.886  -3.651   4.144  23.499 
+
+Coefficients:
+                Estimate Std. Error t value Pr(>|t|)  
+(Intercept)       5.0275     2.5630   1.962    0.057 .
+fishconsump2013   0.1071     0.1010   1.061    0.295  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 8.848 on 39 degrees of freedom
+Multiple R-squared:  0.02804,	Adjusted R-squared:  0.003121 
+F-statistic: 1.125 on 1 and 39 DF,  p-value: 0.2953
+
+    \end{verbatim}
+
+    
+    \hypertarget{relationship-between-smoker-and-nobel}{%
+\subsection{2.4 Relationship between Smoker and
+Nobel}\label{relationship-between-smoker-and-nobel}}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}19}]:} plot\PY{p}{(}collection\PYZus{}data\PY{o}{\PYZdl{}}Smoker\PYZus{}Num2012\PY{p}{,}collection\PYZus{}data\PY{o}{\PYZdl{}}Laureates10million\PY{p}{,}col\PY{o}{=}\PY{l+s}{\PYZsq{}}\PY{l+s}{red\PYZsq{}}\PY{p}{,}cex\PY{o}{=}\PY{l+m}{0.5}\PY{p}{,}lty\PY{o}{=}\PY{l+m}{1}\PY{p}{,}pch\PY{o}{=}\PY{l+m}{15}\PY{p}{)} 
+         text\PY{p}{(}collection\PYZus{}data\PY{o}{\PYZdl{}}Smoker\PYZus{}Num2012\PY{p}{,}collection\PYZus{}data\PY{o}{\PYZdl{}}Laureates10million\PY{p}{,}collection\PYZus{}data\PY{o}{\PYZdl{}}Entity\PY{p}{,}cex\PY{o}{=}\PY{l+m}{0.6}\PY{p}{,} font\PY{o}{=}\PY{l+m}{3}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_23_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}20}]:} lm.smoke\PYZus{}nobel \PY{o}{\PYZlt{}\PYZhy{}} lm\PY{p}{(}Laureates10million \PY{o}{\PYZti{}} Smoker\PYZus{}Num2012\PY{p}{,} data \PY{o}{=} collection\PYZus{}data\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}21}]:} \PY{k+kp}{summary}\PY{p}{(}lm.smoke\PYZus{}nobel\PY{p}{)}
+\end{Verbatim}
+
+
+    
+    \begin{verbatim}
+
+Call:
+lm(formula = Laureates10million ~ Smoker_Num2012, data = collection_data)
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-7.771 -6.615 -3.549  3.849 22.513 
+
+Coefficients:
+                 Estimate Std. Error t value Pr(>|t|)    
+(Intercept)     7.970e+00  1.459e+00   5.463 2.88e-06 ***
+Smoker_Num2012 -3.945e-08  3.002e-08  -1.314    0.197    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 8.783 on 39 degrees of freedom
+Multiple R-squared:  0.0424,	Adjusted R-squared:  0.01784 
+F-statistic: 1.727 on 1 and 39 DF,  p-value: 0.1965
+
+    \end{verbatim}
+
+    
+    \hypertarget{relationship-between-all_data-and-nobel}{%
+\subsection{2.5 Relationship between All\_data and
+Nobel}\label{relationship-between-all_data-and-nobel}}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}22}]:} lm.all\PYZus{}nobel \PY{o}{\PYZlt{}\PYZhy{}} lm\PY{p}{(}Laureates10million \PY{o}{\PYZti{}} \PY{l+m}{.}\PY{p}{,} data \PY{o}{=} collection\PYZus{}data\PY{p}{[}\PY{p}{,}\PY{l+m}{2}\PY{o}{:}\PY{l+m}{6}\PY{p}{]}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}24}]:} \PY{k+kp}{summary}\PY{p}{(}lm.all\PYZus{}nobel\PY{p}{)}
 \end{Verbatim}
 
 
@@ -481,8 +652,12 @@ F-statistic: 12.39 on 4 and 36 DF,  p-value: 1.955e-06
     \end{verbatim}
 
     
+    \hypertarget{choose-good-attributes}{%
+\subsubsection{2.5.1 Choose good
+attributes}\label{choose-good-attributes}}
+
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}37}]:} final.lm \PY{o}{\PYZlt{}\PYZhy{}} step\PY{p}{(}lm.all\PYZus{}nobel\PY{p}{)}
+{\color{incolor}In [{\color{incolor}25}]:} final.lm \PY{o}{\PYZlt{}\PYZhy{}} step\PY{p}{(}lm.all\PYZus{}nobel\PY{p}{)}
 \end{Verbatim}
 
 
@@ -555,6 +730,12 @@ F-statistic: 49.23 on 1 and 39 DF,  p-value: 2.037e-08
     \end{verbatim}
 
     
+    \hypertarget{conclusion}{%
+\subsection{2.6 Conclusion}\label{conclusion}}
+
+    So it seems that only cocoa consumption has good linear relation with
+nobel prize among all the attributes.
+
 
     % Add a bibliography block to the postdoc
     

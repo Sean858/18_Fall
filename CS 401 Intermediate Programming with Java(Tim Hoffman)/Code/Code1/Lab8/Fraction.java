@@ -51,9 +51,7 @@ public class Fraction implements Comparable<Fraction>
 	public int compareTo( Fraction other )
 	{	
 		Fraction diff = new Fraction(this.numer * other.denom - this.denom * other.numer, this.denom * other.denom);
-		if(diff.numer > 0) return 1;
-		else if(diff.numer < 0) return -1;
-		else return 0; 
+		return diff.numer * diff.denom;
 	}
 	public String toString() 
 	{

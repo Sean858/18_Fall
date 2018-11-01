@@ -12,7 +12,6 @@ public class FractionTester
 		ArrayList<Fraction> AList = new ArrayList<Fraction>();
 		for (int i=5 ; i>=0 ; --i )
 			AList.add(  new Fraction(1+generator.nextInt(100), 1+generator.nextInt(100)) ); // numer and denom in [1..99]
-
 		// MAKE DEEP COPY OF THOSE FRACTIONS IN THE ARAYLIST ABOVE,  BUT STORE INTO PLAIN ARRAY OF FRACTION
 
 		Fraction[] plainArr = new Fraction[ AList.size() ];
