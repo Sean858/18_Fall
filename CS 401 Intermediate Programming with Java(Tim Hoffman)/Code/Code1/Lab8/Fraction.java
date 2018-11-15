@@ -28,14 +28,9 @@ public class Fraction implements Comparable<Fraction>
 		setDenom(d/gcd);
 	}
 
-	public Fraction( int n )
-	{
-		this( n, 1 ); 
-	}
-
 	public Fraction( Fraction other )
 	{
-		this( other.numer, other.denom ); 
+		this( other.getNumer(), other.getDenom() ); 
 	}
 
 	private int gcd( int n, int d )
@@ -50,7 +45,7 @@ public class Fraction implements Comparable<Fraction>
 	
 	public int compareTo( Fraction other )
 	{	
-		Fraction diff = new Fraction(this.numer * other.denom - this.denom * other.numer, this.denom * other.denom);
+		Fraction diff = new Fraction( this.numer * other.getDenom() - this.denom * other.getNumer(), this.denom * other.getDenom());
 		return diff.numer * diff.denom;
 	}
 	public String toString() 
